@@ -82,6 +82,7 @@ endif()
 
 include_directories(include)
 add_library(ogg ${OGG_HEADERS} ${OGG_SOURCES})
+add_library(ogg-static STATIC ${OGG_HEADERS} ${OGG_SOURCES})
 
 get_version_info(OGG_VERSION_INFO "LIB_CURRENT" "LIB_AGE" "LIB_REVISION")
 set_target_properties(
@@ -104,7 +105,7 @@ endif()
 
 configure_pkg_config_file(ogg.pc.in)
 
-install(TARGETS ogg
+install(TARGETS ogg ogg-static
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
