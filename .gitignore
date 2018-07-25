@@ -33,3 +33,4 @@ src/test_*
 macosx/build/
 _build/
 .DS_Store
+BUILD/
