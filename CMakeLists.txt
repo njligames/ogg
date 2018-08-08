@@ -111,7 +111,7 @@ endif()
 
 configure_pkg_config_file(ogg.pc.in)
 
-install(TARGETS ogg ogg-static
+install(TARGETS ogg 
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
