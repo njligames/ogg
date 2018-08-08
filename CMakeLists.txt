@@ -81,8 +81,14 @@ if(BUILD_FRAMEWORK)
 endif()
 
 include_directories(include)
-add_library(ogg ${OGG_HEADERS} ${OGG_SOURCES})
-add_library(ogg-static STATIC ${OGG_HEADERS} ${OGG_SOURCES})
+
+if(BUILD_SHARED_LIB)
+  add_library(ogg SHARED ${OGG_HEADERS} ${OGG_SOURCES})
+endif()
+
+if(BUILD_STATIC_LIB)
+  add_library(ogg STATIC ${OGG_HEADERS} ${OGG_SOURCES})
+endif()
 
 get_version_info(OGG_VERSION_INFO "LIB_CURRENT" "LIB_AGE" "LIB_REVISION")
 set_target_properties(
