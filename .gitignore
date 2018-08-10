@@ -34,3 +34,15 @@ macosx/build/
 _build/
 .DS_Store
 BUILD/
+Debug-appletvos/
+Debug-appletvsimulator/
+Debug-iphoneos/
+Debug-iphonesimulator/
+MinsizeRel-iphoneos/
+MinsizeRel-iphonesimulator/
+RelWithDebugInfo-iphoneos/
+RelWithDebugInfo-iphonesimulator/
+Release-appletvos/
+Release-appletvsimulator/
+Release-iphoneos/
+Release-iphonesimulator/
